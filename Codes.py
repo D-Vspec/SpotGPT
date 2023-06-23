@@ -2,9 +2,9 @@ import base64
 import json
 from requests import post
 
+client_id = 'CLIENT_ID'
+client_secret = 'CLIENT_SECRET'
 
-client_id = 'af1afa73842e41cdbeb145d83eb52eb2'
-client_secret = 'eaf72736f7614662b4fe66ce2d395140'
 redirect_uri = 'http://localhost:8888/callback'
 url = "https://accounts.spotify.com/api/token"
 code_url= 'https://accounts.spotify.com/authorize?client_id=af1afa73842e41cdbeb145d83eb52eb2&response_type=code&redirect_uri=http://localhost:8888/callback&show_dialog=true&scope=playlist-modify-private playlist-modify-public playlist-read-private playlist-read-collaborative ugc-image-upload'
