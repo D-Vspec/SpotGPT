@@ -2,8 +2,9 @@ import base64
 import json
 from requests import post
 
-client_id = 'af1afa73842e41cdbeb145d83eb52eb2'
-client_secret = 'eaf72736f7614662b4fe66ce2d395140'
+client_id = 'CLIENT_ID'
+client_secret = 'CLIENT_SECRET'
+
 redirect_uri = 'http://localhost:8888/callback'
 url = "https://accounts.spotify.com/authorize"
 
