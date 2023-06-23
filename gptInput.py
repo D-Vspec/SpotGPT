@@ -3,7 +3,7 @@ from NewPlaylist import makePlaylist
 from AddSongs import addSong
 from SpotifySearch import SpotifySearch
 
-openai.api_key = "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"
+openai.api_key = "OPEN_API_KEY"
 
 Output = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
