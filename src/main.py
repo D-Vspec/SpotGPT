@@ -1,9 +1,9 @@
-import LLM
+from LLM import getLLMrecommendations
 from NewPlaylist import makePlaylist
 from AddSongs import addSong
 from SpotifySearch import SpotifySearch
 
-songList = input("Enter the recommendations you want")
+songList = getLLMrecommendations(input("Enter the recommendations you want: "))
 
 playlist_id, playlist_link = makePlaylist(str(input('Make name: ')))
 
