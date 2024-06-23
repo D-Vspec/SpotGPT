@@ -1,3 +1,4 @@
+import base64
 from requests import post
 from SpotifyAuth import getToken
 import json
