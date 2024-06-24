@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const App: React.FC = () => {
   const [playlistName, setPlaylistName] = useState('');
@@ -37,6 +39,14 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>Create Playlist</h1>
+        <a
+          href="https://github.com/D-Vspec/SpotGPT"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-button"
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="playlistName">Playlist Name:</label>

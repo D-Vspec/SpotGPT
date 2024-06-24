@@ -1,3 +1,5 @@
+/* App.css */
+
 .App {
   text-align: center;
   background-color: #191414; /* Spotify black */
@@ -7,6 +9,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  position: relative;
 }
 
 .App-header {
@@ -18,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 h1 {
@@ -118,4 +122,18 @@ input {
 
 .playlist-button:hover {
   background-color: #14833b; /* Darker green on hover */
+}
+
+.github-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.github-button:hover {
+  color: #cfcfcf; /* Light grey on hover */
 }
