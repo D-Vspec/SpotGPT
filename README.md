@@ -1,1 +1,1 @@
-Song recommendations from ChatGPT automatically created into a playlist on spotify
+An application using LLMs for playlist generation on Spotify.
