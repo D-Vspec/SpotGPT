@@ -28,7 +28,6 @@ def getLLMrecommendations(question: str) -> list:
 
     pattern = r'\d+\.\s(.*?)(?=\n|$)'
     matches = re.findall(pattern, str(response))
-    items = [f'"{m[0]}" - "{m[1]}"' for m in matches]
     return matches
 
 

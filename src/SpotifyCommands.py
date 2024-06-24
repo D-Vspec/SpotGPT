@@ -6,7 +6,6 @@ client_id = 'af1afa73842e41cdbeb145d83eb52eb2'
 client_secret = 'eaf72736f7614662b4fe66ce2d395140'
 
 redirect_uri = 'http://localhost:8888/callback'
-url = "https://accounts.spotify.com/authorize"
 
 def getToken():
 
@@ -32,6 +31,8 @@ def getToken():
     return json_result['access_token']
 
 def makePlaylist(Name, token):
+    url = 'https://api.spotify.com/v1/users/newuggzl4u72ucxqqp2qyqka4/playlists'
+
     headers = {
         "Authorization": "Bearer " + token,
         "Content-Type": "application/json",
@@ -66,7 +67,6 @@ def SpotifySearch(searchterm, token):
     #print(response_json['items'])
     for i in response_json['tracks']['items']:
         return(i['id'])
-        break
 
 def addSong(song_id, playlist_id, token):
     url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
@@ -82,4 +82,3 @@ def addSong(song_id, playlist_id, token):
     }
 
     response = post(url, headers=headers, data=json.dumps(data))
-    print(response.content)

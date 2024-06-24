@@ -1,19 +1,17 @@
 from LLM import getLLMrecommendations
 from SpotifyCommands import *
-# from NewPlaylist import makePlaylist
-# from AddSongs import addSong
-# from SpotifySearch import SpotifySearch
 
 token = getToken()
+playlistName = input("What would you like to name your playlist: ")
 
 songList = getLLMrecommendations(input("Enter the recommendations you want: "))
-playlist_id, playlist_link = makePlaylist(str(input('Make name: ')), token)
+playlist_id, playlist_link = makePlaylist(playlistName, token)
 
-for i in songList:
-    if i != '':
-        songID = SpotifySearch(i, token)
-        print(songID)
+for index, song in enumerate(songList):
+    length = len(songList)
+    if song != '':
+        songID = SpotifySearch(song, token)
         addSong(songID, playlist_id, token)
+        print(f"\rAdded song: {index+1}/{length}", end="")
 
-
-print('Link to the playlist -> ' + playlist_link)
+print('\nLink to the playlist -> ' + playlist_link)
