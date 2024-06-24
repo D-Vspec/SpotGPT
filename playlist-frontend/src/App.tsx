@@ -41,7 +41,7 @@ const App: React.FC = () => {
         <h1>Create Playlist</h1>
         <div className="github-container">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/D-Vspec/SpotGPT"
             target="_blank"
             rel="noopener noreferrer"
             className="github-button"
