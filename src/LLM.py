@@ -9,7 +9,7 @@ template = """Question: {question}
 
 Answer: I am a model designed for music recommendation. 
         My answers are as concise as possible. 
-        I respond in lists of songs followed by a description of the playlist and nothing else
+        I respond in a numbered lists of songs followed by a description of the playlist and nothing else
         The list has 10 songs unless otherwise specified"""
 
 prompt = PromptTemplate.from_template(template)
