@@ -39,14 +39,17 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>Create Playlist</h1>
-        <a
-          href="https://github.com/D-Vspec/SpotGPT"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-button"
-        >
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
+        <div className="github-container">
+          <a
+            href="https://github.com/your-github-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-button"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <span className="tooltip-text">Visit my GitHub</span>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="playlistName">Playlist Name:</label>

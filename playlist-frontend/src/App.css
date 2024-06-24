@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #191414; /* Spotify black */
+  background-color: #191414;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  background-color: #1DB954; /* Spotify green */
+  background-color: #1DB954;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@ input {
 }
 
 .submit-button {
-  background-color: #1DB954; /* Spotify green */
+  background-color: #1DB954;
   color: white;
   padding: 10px 20px;
   font-size: 1em;
@@ -68,7 +68,7 @@ input {
 }
 
 .submit-button:hover {
-  background-color: #14833b; /* Darker green on hover */
+  background-color: #14833b;
 }
 
 .loading {
@@ -107,7 +107,7 @@ input {
 
 .playlist-button {
   display: inline-block;
-  background-color: #1DB954; /* Spotify green */
+  background-color: #1DB954;
   color: white;
   padding: 10px 20px;
   font-size: 1em;
@@ -119,19 +119,47 @@ input {
 }
 
 .playlist-button:hover {
-  background-color: #14833b; /* Darker green on hover */
+  background-color: #14833b;
 }
 
-.github-button {
+.github-container {
   position: absolute;
   top: 20px;
   right: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.github-button {
   color: white;
   font-size: 2em;
   text-decoration: none;
   transition: color 0.3s;
+  position: relative;
 }
 
 .github-button:hover {
-  color: #cfcfcf; /* Light grey on hover */
+  color: #cfcfcf;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 35px;
+  width: 120px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.github-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
