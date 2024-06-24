@@ -48,7 +48,7 @@ const App: React.FC = () => {
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <span className="tooltip-text">Visit my GitHub :D</span>
+          <span className="tooltip-text">Visit my GitHub</span>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -58,6 +58,7 @@ const App: React.FC = () => {
               id="playlistName"
               value={playlistName}
               onChange={(e) => setPlaylistName(e.target.value)}
+              placeholder="Enter playlist name"
               required
             />
           </div>
@@ -68,6 +69,7 @@ const App: React.FC = () => {
               id="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              placeholder="Example: Make a playlist of old bollywood songs"
               required
             />
           </div>
@@ -81,7 +83,7 @@ const App: React.FC = () => {
         ) : (
           playlistLink && (
             <a href={playlistLink} target="_blank" rel="noopener noreferrer" className="playlist-button">
-              Take me to the playlist
+              Link to the playlist
             </a>
           )
         )}
