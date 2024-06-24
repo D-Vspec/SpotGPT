@@ -63,7 +63,7 @@ const App: React.FC = () => {
         {loading ? (
           <div className="loading">
             <div className="spinner"></div>
-            <p>Generating...</p>
+            <p>Generating... (This can take a minute or two)</p>
           </div>
         ) : (
           playlistLink && (

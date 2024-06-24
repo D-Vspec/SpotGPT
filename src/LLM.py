@@ -7,7 +7,9 @@ home = os.path.expanduser("~")
 model = "Meta-Llama-3-8B-Instruct-Q6_K.gguf"
 template = """Question: {question}
 
-Answer: I am a model designed for music recommendation. My answers are as concise as possible."""
+Answer: I am a model designed for music recommendation. 
+        My answers are as concise as possible. 
+        I respond in lists of songs followed by a description of the playlist and nothing else"""
 
 prompt = PromptTemplate.from_template(template)
 
