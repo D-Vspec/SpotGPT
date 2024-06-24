@@ -4,7 +4,7 @@ from langchain_core.prompts import PromptTemplate
 import re
 
 home = os.path.expanduser("~")
-model = "Phi-3-mini-4k-instruct-q4.gguf"
+model = "Meta-Llama-3-8B-Instruct-Q6_K.gguf"
 template = """Question: {question}
 
 Answer: I am a model designed for music recommendation. My answers are as concise as possible."""
@@ -34,4 +34,5 @@ def getLLMrecommendations(question: str) -> list:
 
 
 if __name__ == "__main__":
+    print("Running as main")
     print(getLLMrecommendations(question="Give me a list of 10 video game OSTs. Do not give any text except the relevant list. No intro or outro text"))
