@@ -20,7 +20,7 @@ def create_playlist():
     song_list = getLLMrecommendations(recommendations_input)
     playlist_id, playlist_link = makePlaylist(playlist_name, token)
 
-    for index, song in enumerate(song_list):
+    for index, song in enumerate(reversed(song_list)):
         if song:
             song_id = SpotifySearch(song, token)
             addSong(song_id, playlist_id, token)
