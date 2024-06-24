@@ -48,7 +48,7 @@ const App: React.FC = () => {
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <span className="tooltip-text">Visit my GitHub</span>
+          <span className="tooltip-text">Visit my GitHub :D</span>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -80,12 +80,9 @@ const App: React.FC = () => {
           </div>
         ) : (
           playlistLink && (
-            <div className="playlist-link">
-              <p>Link to the playlist:</p>
-              <a href={playlistLink} target="_blank" rel="noopener noreferrer" className="playlist-button">
-                Open Playlist
-              </a>
-            </div>
+            <a href={playlistLink} target="_blank" rel="noopener noreferrer" className="playlist-button">
+              Take me to the playlist
+            </a>
           )
         )}
       </header>
