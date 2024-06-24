@@ -63,13 +63,15 @@ const App: React.FC = () => {
         {loading ? (
           <div className="loading">
             <div className="spinner"></div>
-            <p>Generating... (This can take a minute or two)</p>
+            <p>Generating...</p>
           </div>
         ) : (
           playlistLink && (
             <div className="playlist-link">
               <p>Link to the playlist:</p>
-              <a href={playlistLink} target="_blank" rel="noopener noreferrer">{playlistLink}</a>
+              <a href={playlistLink} target="_blank" rel="noopener noreferrer" className="playlist-button">
+                Open Playlist
+              </a>
             </div>
           )
         )}

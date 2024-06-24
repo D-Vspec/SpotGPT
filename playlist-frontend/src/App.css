@@ -1,5 +1,3 @@
-/* App.css */
-
 .App {
   text-align: center;
   background-color: #191414; /* Spotify black */
@@ -100,7 +98,24 @@ input {
   text-align: center;
 }
 
-.playlist-link a {
+.playlist-link p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.playlist-button {
+  display: inline-block;
+  background-color: #1DB954; /* Spotify green */
   color: white;
-  text-decoration: underline;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.playlist-button:hover {
+  background-color: #14833b; /* Darker green on hover */
 }
