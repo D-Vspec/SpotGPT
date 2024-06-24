@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/D-Vspec/SpotGPT/static/css/main.629c5cbc.css",
-    "main.js": "/D-Vspec/SpotGPT/static/js/main.8ba36914.js",
-    "static/js/453.509588f4.chunk.js": "/D-Vspec/SpotGPT/static/js/453.509588f4.chunk.js",
-    "index.html": "/D-Vspec/SpotGPT/index.html",
-    "main.629c5cbc.css.map": "/D-Vspec/SpotGPT/static/css/main.629c5cbc.css.map",
-    "main.8ba36914.js.map": "/D-Vspec/SpotGPT/static/js/main.8ba36914.js.map",
-    "453.509588f4.chunk.js.map": "/D-Vspec/SpotGPT/static/js/453.509588f4.chunk.js.map"
+    "main.css": "/SpotGPT/static/css/main.629c5cbc.css",
+    "main.js": "/SpotGPT/static/js/main.caa8f99e.js",
+    "static/js/453.509588f4.chunk.js": "/SpotGPT/static/js/453.509588f4.chunk.js",
+    "index.html": "/SpotGPT/index.html",
+    "main.629c5cbc.css.map": "/SpotGPT/static/css/main.629c5cbc.css.map",
+    "main.caa8f99e.js.map": "/SpotGPT/static/js/main.caa8f99e.js.map",
+    "453.509588f4.chunk.js.map": "/SpotGPT/static/js/453.509588f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.629c5cbc.css",
-    "static/js/main.8ba36914.js"
+    "static/js/main.caa8f99e.js"
   ]
 }
