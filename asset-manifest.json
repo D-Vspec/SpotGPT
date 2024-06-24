@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SpotGPT/static/css/main.629c5cbc.css",
-    "main.js": "/SpotGPT/static/js/main.0fb2c3bf.js",
+    "main.js": "/SpotGPT/static/js/main.f5c90dcb.js",
     "static/js/453.509588f4.chunk.js": "/SpotGPT/static/js/453.509588f4.chunk.js",
     "index.html": "/SpotGPT/index.html",
     "main.629c5cbc.css.map": "/SpotGPT/static/css/main.629c5cbc.css.map",
-    "main.0fb2c3bf.js.map": "/SpotGPT/static/js/main.0fb2c3bf.js.map",
+    "main.f5c90dcb.js.map": "/SpotGPT/static/js/main.f5c90dcb.js.map",
     "453.509588f4.chunk.js.map": "/SpotGPT/static/js/453.509588f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.629c5cbc.css",
-    "static/js/main.0fb2c3bf.js"
+    "static/js/main.f5c90dcb.js"
   ]
 }
