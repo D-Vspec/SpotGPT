@@ -4,13 +4,33 @@ import './App.css';
 const App: React.FC = () => {
   const [playlistName, setPlaylistName] = useState('');
   const [description, setDescription] = useState('');
+  const [playlistLink, setPlaylistLink] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Playlist Name:', playlistName);
-    console.log('Description:', description);
+    setLoading(true);
+    setPlaylistLink(''); // Reset playlist link when a new request is made
 
-    // Here you can add the code to call your Python backend API
+    try {
+      const response = await fetch('http://localhost:5000/create_playlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ playlistName, description }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setPlaylistLink(data.playlistLink);
+      } else {
+        console.error('Error:', data);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -40,6 +60,19 @@ const App: React.FC = () => {
           </div>
           <button type="submit" className="submit-button">Create</button>
         </form>
+        {loading ? (
+          <div className="loading">
+            <div className="spinner"></div>
+            <p>Generating...</p>
+          </div>
+        ) : (
+          playlistLink && (
+            <div className="playlist-link">
+              <p>Link to the playlist:</p>
+              <a href={playlistLink} target="_blank" rel="noopener noreferrer">{playlistLink}</a>
+            </div>
+          )
+        )}
       </header>
     </div>
   );

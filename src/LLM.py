@@ -17,6 +17,8 @@ llm = LlamaCpp(
     max_tokens=2000,
     top_p=1,
     n_ctx=2048,
+    use_gpu=True,
+    gpu_memory_fraction=0.9
 )
 
 llm_chain = prompt | llm
