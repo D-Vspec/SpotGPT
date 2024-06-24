@@ -1,9 +1,13 @@
 from requests import get, post
+from dotenv import load_dotenv
 import base64
 import json
+import os
 
-client_id = 'af1afa73842e41cdbeb145d83eb52eb2'
-client_secret = 'eaf72736f7614662b4fe66ce2d395140'
+load_dotenv()
+
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
 
 redirect_uri = 'http://localhost:8888/callback'
 
@@ -82,3 +86,7 @@ def addSong(song_id, playlist_id, token):
     }
 
     response = post(url, headers=headers, data=json.dumps(data))
+
+if __name__ == "__main__":
+    print(client_secret)
+    print(client_id)
